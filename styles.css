@@ -1,0 +1,776 @@
+/* --- [중국어 덩어리 훈련: 오렌지 테마 CSS] --- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', 'Noto Sans SC', 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: #fff5e6; /* 연한 살구색 배경 */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* 메인 포인트 주황색 */
+  border-top: 10px solid #ff9800;
+  border-bottom: 10px solid #ff9800;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #e65100; /* 진한 주황색 */
+  letter-spacing: 1px;
+}
+
+header:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff9800,
+    #ff9800 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  margin-top: 15px;
+}
+
+.creator-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff9800;
+  font-size: 0.9rem;
+  font-style: bold;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 5px solid #ff9800;
+}
+
+.popup h2 {
+  color: #e65100;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.popup-content h3 {
+  margin-bottom: 0.1rem;
+  text-align: center;
+}
+
+.popup-content h4 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.subtitle-center {
+  text-align: center;
+  margin-bottom: 0.6rem;
+  color: #e65100;
+}
+
+.highlight-red {
+  color: #d84315; /* 주황색에 어울리는 따뜻한 레드 */
+  font-weight: bold;
+}
+
+.popup-content p.compact-text {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.popup-content p.compact-credit {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.popup-content p.compact-credit + p.compact-credit {
+  margin-top: 0.3rem !important;
+}
+
+.popup-content h4 + h4 {
+  margin-top: 0rem;
+}
+
+.review-instruction {
+  margin-bottom: 0.3rem !important;
+}
+
+.review-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.popup p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.day-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.day-button {
+  padding: 1rem 1.5rem;
+  background-color: #fff3e0; /* 연한 주황 배경 */
+  color: #e65100;
+  border: 2px solid #ffb74d;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.day-button:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+.day-button:disabled {
+  background-color: #f5f5f5;
+  border-color: #cccccc;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.day-button.active {
+  background-color: #ff9800;
+  color: white;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  padding: 0.5rem;
+  color: #e65100;
+}
+
+.timer-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.timer-display h3 {
+  font-size: 1.5rem;
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+
+.progress-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.progress-display h3 {
+  font-size: 1.5rem;
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ff9800;
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 8px;
+}
+
+.sentence-display {
+  background-color: #fff3e0;
+  padding: 1.2rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  border: 1px dashed #ff9800;
+  transition: all 0.3s ease; /* 부드러운 강조 변화를 위해 추가 */
+}
+
+/* --- 완성문장 강조 디자인 시작 --- */
+.sentence-display .final-sentence,
+#korean-sentence.final-sentence {
+  color: #bf360c; /* 더 진한 주황-빨강색으로 가독성 향상 */
+  font-weight: 900; /* 최대한 굵게 */
+  font-size: 1.7rem; /* 글자 크기 대폭 확대 */
+  text-shadow: 0 2px 4px rgba(230, 81, 0, 0.2);
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.sentence-display:has(.final-sentence) {
+  background-color: #fff3e0;
+  border: 5px solid #e65100; /* 테두리를 아주 두껍고 진하게 변경 */
+  box-shadow: 0 10px 25px rgba(230, 81, 0, 0.3); /* 그림자를 강하게 주어 튀어나와 보이게 함 */
+  transform: scale(1.02); /* 상자 크기를 살짝 키워 시각적 긴장감 부여 */
+}
+/* --- 완성문장 강조 디자인 끝 --- */
+
+.instruction {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #8e44ad;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.card-area {
+  margin-bottom: 0.8rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  min-height: 100px;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  transition: all 0.3s;
+  background-color: white;
+}
+
+#placed-cards {
+  background-color: white !important;
+  border: 2px dotted #ff9800;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 2;
+  min-height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+#available-cards {
+  background-color: transparent;
+  border: none;
+  padding: 0.7rem;
+  margin-bottom: 0.3125rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 1.5rem;
+  background-color: #fff8e1; /* 연한 살구색 */
+  color: #e65100;
+  border: 2px solid #ffb74d;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: #ffe0b2;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(255, 152, 0, 0.1);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.card .hanzi {
+  font-family: 'Noto Sans SC', 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.card .pinyin {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.answer-area {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3125rem;
+}
+
+.control-buttons {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3125rem;
+  gap: 1rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#result-message {
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 2px solid #ff9800;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+#result-message.incorrect {
+  background-color: #fdecea;
+  color: #e53935;
+  border-color: #e53935;
+}
+
+#result-message.correct {
+  background-color: #e8f5e9;
+  color: #43a047;
+  border-color: #43a047;
+}
+
+button {
+  padding: 0.2rem 2rem;
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 2px solid #ffb74d;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+#start-game {
+  background-color: #ff9800;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#check-button {
+  background-color: #ff9800;
+  color: white;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.7rem 2rem;
+}
+
+#check-button:hover {
+  background-color: #e65100;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#review-sentences {
+  margin-top: 1.5rem;
+  background-color: #fff3e0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-height: 50vh;
+  overflow-y: auto;
+  border: 2px solid #ff9800;
+}
+
+.review-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px dashed #ff9800;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.review-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sentence-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e65100;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ff9800;
+}
+
+.sentence-box {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+}
+
+.sentence-box .chinese {
+  font-family: 'Noto Sans SC', 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #e65100;
+}
+
+.sentence-box .pinyin {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+  font-style: bold;
+  margin-bottom: 0.6rem;
+  color: #404040;
+  font-weight: 500;
+}
+
+.sentence-box .korean {
+  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.8rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .popup-content {
+    padding: 1.5rem;
+  }
+  .popup h2 {
+    font-size: 1.5rem;
+  }
+  .sentence-display {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#start-game {
+  background-color: #ff9800;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+#start-game:hover {
+  background-color: #e65100;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#day-selection h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e65100;
+  font-size: 1.5rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+#timeout-popup .popup-content {
+  background-color: #fff9f0;
+  border: 3px solid #ff9800;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#timeout-popup h2 {
+  color: #e65100;
+  font-size: 2rem;
+}
+
+#completed-day {
+  color: #e65100;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.elapsed-time {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e65100;
+  font-weight: 600;
+  background-color: #fff3e0;
+  border-radius: 10px;
+  border: 2px solid #ff9800;
+}
+
+.explanation-content h2 {
+  color: #e65100;
+  font-size: 1.8rem;
+}
+
+.explanation-text {
+  background-color: #fff5e6;
+  border-radius: 10px;
+  border: 2px dashed #ff9800;
+}
+
+.explanation-list li {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+}
+
+#close-explanation {
+  background-color: #ff9800;
+  color: white;
+}
+
+#close-explanation:hover {
+  background-color: #e65100;
+}
+
+#reset-button {
+  background-color: #dc2626;
+  color: white;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.7rem 2rem;
+}
+
+#reset-button:hover {
+  background-color: #991b1b;
+}
+
+/* --- [무한 반복 워터마크 설정] --- */
+
+#game-area {
+  position: relative;
+  z-index: 1;
+  /* 아래 background 설정을 통해 작은 글자가 반복되게 만듭니다 */
+}
+
+/* 가상 요소를 사용하여 전체 배경에 패턴을 깝니다 */
+#game-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* SVG를 활용한 무한 반복 배경 패턴 */
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-size='14' fill='rgba(230, 81, 0, 0.08)' font-family='Noto Sans KR' text-anchor='middle' transform='rotate(-25, 75, 75)'%3E진담중국어%3C/text%3E%3C/svg%3E");
+
+  background-repeat: repeat; /* 패턴 무한 반복 */
+  z-index: 0; /* 콘텐츠보다 뒤로 보냄 */
+  pointer-events: none; /* 클릭 방해 금지 */
+  opacity: 1;
+}
+
+/* --- [미리보기 팝업 전용 스타일] --- */
+
+.preview-container {
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+#preview-title {
+  color: #e65100;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 한국어 문장이 들어가는 상자 */
+.preview-box {
+  background-color: #fff8e1;
+  border: 2px dashed #ff9800;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* "중국어로 툭! 나오시나요?" 문구 */
+.preview-tagline {
+  color: #d84315;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 하단 작은 안내문 박스 */
+.preview-instructions {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  text-align: left;
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.preview-instructions p {
+  margin-bottom: 5px !important;
+  font-size: 0.95rem !important;
+}
+
+/* 훈련 시작 버튼 강조 */
+#close-preview.btn-primary {
+  width: 100%;
+  background-color: #ff9800;
+  color: white;
+  height: 55px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 0 #e68a00; /* 입체감 버튼 */
+}
+
+#close-preview.btn-primary:hover {
+  background-color: #f57c00;
+}
+
+#close-preview.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #e68a00;
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  .preview-box {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .preview-tagline {
+    font-size: 1.1rem;
+  }
+}

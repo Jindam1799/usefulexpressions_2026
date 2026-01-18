@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧱 중국어덩어리훈련 말버릇편 🧱</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://jindam1799.github.io/habit_0126/"
+    />
+    <meta property="og:title" content="🧱 중국어덩어리훈련 말버릇 🧱" />
+    <meta
+      property="og:description"
+      content="4주 동안 매주 5세트의 대화, 총 40문장을 반복·확장하며 훈련하는 중국어학습게임"
+    />
+    <meta
+      property="og:image"
+      content="https://jindam1799.github.io/habit_0126/images/logo.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🧱 중국어덩어리훈련 말버릇편 🧱</h1>
+      </header>
+
+      <div id="intro-popup" class="popup">
+        <div class="popup-content">
+          <h2 class="subtitle-center">🧱 중국어덩어리훈련 🧱</h2>
+          <h3 class="subtitle-center">말버릇편</h3>
+          <h5 class="subtitle-center">"덩어리로 툭! 말문이 트인다"</h5>
+          <br />
+          <p>
+            <strong
+              >'중국어 덩어리훈련'은 어순이 곧 어법인 중국어를 덩어리로 익히며,
+              문장이 입에서 자연스럽게 나오도록 설계되었습니다.</strong
+            >
+          </p>
+          <p class="highlight-red">
+            "입에서 '툭' 튀어나올 수 있도록 하는 것"이 목표!
+          </p>
+          <p>
+            4주 동안 매주 5세트의 대화, 총 40문장을 반복·확장하며 훈련하세요.
+          </p>
+          <p>한국어를 보고 중국어가 '툭' 튀어나오는 것이 저희의 목표입니다.</p>
+          <p class="compact-credit">제작 : 진담중국어 전진아</p>
+          <p class="compact-credit">개발 : Dukimi</p>
+          <div class="button-container">
+            <button id="start-game">게임 시작하기</button>
+          </div>
+        </div>
+      </div>
+      <div id="preview-popup" class="popup hidden">
+        <div class="popup-content preview-container">
+          <h2 id="preview-title">완성문장 1</h2>
+
+          <div id="preview-korean-area" class="preview-box"></div>
+
+          <h3 class="preview-tagline">"이 문장, 중국어로 툭! 나오시나요?"</h3>
+
+          <div class="preview-instructions">
+            <p>• 완성될 대화의 한국어 의미를 미리 확인해 보세요.</p>
+            <p>• 중국어 표현은 문맥에 따라 번역이 달라질 수 있습니다.</p>
+            <p>
+              • 문장 전체의 <strong>'느낌'</strong>에 집중하는 것이 훈련
+              포인트입니다.
+            </p>
+          </div>
+
+          <div class="button-container">
+            <button id="close-preview" class="btn-primary">훈련 시작!</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="day-selection" class="hidden">
+        <h3>학습할 Week를 선택하세요</h3>
+        <div class="day-buttons"></div>
+      </div>
+
+      <div id="game-area" class="hidden">
+        <div class="progress-bar"><div class="progress"></div></div>
+        <div class="game-header">
+          <div class="sentence-info">
+            <span id="current-day"></span> <span id="sentence-count"></span>
+          </div>
+          <div class="timer">남은 시간: <span id="time-left"></span>초</div>
+        </div>
+        <div class="sentence-display"><p id="korean-sentence"></p></div>
+        <div class="card-area">
+          <div class="answer-area">
+            <div id="placed-cards" class="card-container"></div>
+          </div>
+          <div id="available-cards" class="card-container"></div>
+        </div>
+        <div class="control-buttons">
+          <button id="reset-button">새로고침</button>
+          <button id="check-button">확인하기</button>
+        </div>
+      </div>
+
+      <div id="review-popup" class="popup hidden">
+        <div class="popup-content">
+          <h3 id="completed-day">Week <span id="day-number"></span> 완료!</h3>
+          <h2>이번 주에 입에 익힌 대화 문장들</h2>
+          <div id="elapsed-time" class="elapsed-time"></div>
+          <div id="review-sentences"></div>
+          <div class="button-container">
+            <button id="finish-review">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="sentences.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
