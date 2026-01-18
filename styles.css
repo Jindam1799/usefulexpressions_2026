@@ -1,4 +1,4 @@
-/* --- [중국어 덩어리 훈련: 노란색 테마 CSS] --- */
+/* --- [중국어 덩어리 훈련: 골드 테마 CSS] --- */
 
 * {
   box-sizing: border-box;
@@ -22,9 +22,9 @@ body {
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  /* 메인 포인트 노란색 */
-  border-top: 10px solid #FFF500;
-  border-bottom: 10px solid #FFF500;
+  /* 메인 포인트 골드 */
+  border-top: 10px solid #f1c54b;
+  border-bottom: 10px solid #f1c54b;
 }
 
 header {
@@ -38,7 +38,7 @@ header h1 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
-  color: #CC9900; /* 진한 노란색 */
+  color: #d4a842; /* 진한 골드 */
   letter-spacing: 1px;
 }
 
@@ -49,8 +49,8 @@ header:after {
   height: 2px;
   background: repeating-linear-gradient(
     90deg,
-    #FFF500,
-    #FFF500 8px,
+    #f1c54b,
+    #f1c54b 8px,
     transparent 8px,
     transparent 16px
   );
@@ -61,7 +61,7 @@ header:after {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #FFF500;
+  color: #f1c54b;
   font-size: 0.9rem;
   font-style: bold;
 }
@@ -88,11 +88,11 @@ header:after {
   max-height: 90%;
   overflow-y: auto;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  border: 5px solid #FFF500;
+  border: 5px solid #f1c54b;
 }
 
 .popup h2 {
-  color: #CC9900;
+  color: #d4a842;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -112,11 +112,11 @@ header:after {
 .subtitle-center {
   text-align: center;
   margin-bottom: 0.6rem;
-  color: #CC9900;
+  color: #d4a842;
 }
 
 .highlight-red {
-  color: #CC9900; /* 노란색에 어울리는 진한 골드 */
+  color: #d4a842; /* 골드에 어울리는 진한 톤 */
   font-weight: bold;
 }
 
@@ -167,8 +167,8 @@ header:after {
 .day-button {
   padding: 1rem 1.5rem;
   background-color: #FFFDF5; /* 연한 크림색 배경 */
-  color: #CC9900;
-  border: 2px solid #FFF500;
+  color: #d4a842;
+  border: 2px solid #f1c54b;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -177,7 +177,7 @@ header:after {
 }
 
 .day-button:hover {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: white;
 }
 
@@ -189,7 +189,7 @@ header:after {
 }
 
 .day-button.active {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: white;
 }
 
@@ -199,7 +199,7 @@ header:after {
   align-items: center;
   margin-bottom: 0.7rem;
   padding: 0.5rem;
-  color: #CC9900;
+  color: #d4a842;
 }
 
 .timer-display {
@@ -209,7 +209,7 @@ header:after {
 
 .timer-display h3 {
   font-size: 1.5rem;
-  color: #CC9900;
+  color: #d4a842;
   margin-bottom: 0.5rem;
 }
 
@@ -220,13 +220,13 @@ header:after {
 
 .progress-display h3 {
   font-size: 1.5rem;
-  color: #CC9900;
+  color: #d4a842;
   margin-bottom: 0.5rem;
 }
 
 .progress {
   height: 100%;
-  background-color: #FFF500;
+  background-color: #f1c54b;
   width: 0%;
   transition: width 0.5s ease;
   border-radius: 8px;
@@ -242,25 +242,25 @@ header:after {
   font-size: 1.3rem;
   font-weight: 500;
   color: #333;
-  border: 1px dashed #FFF500;
+  border: 1px dashed #f1c54b;
   transition: all 0.3s ease; /* 부드러운 강조 변화를 위해 추가 */
 }
 
 /* --- 완성문장 강조 디자인 시작 --- */
 .sentence-display .final-sentence,
 #korean-sentence.final-sentence {
-  color: #B8860B; /* 더 진한 골드색으로 가독성 향상 */
+  color: #c9a037; /* 더 진한 골드색으로 가독성 향상 */
   font-weight: 900; /* 최대한 굵게 */
   font-size: 1.7rem; /* 글자 크기 대폭 확대 */
-  text-shadow: 0 2px 4px rgba(255, 245, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(241, 197, 75, 0.2);
   line-height: 1.4;
   word-break: keep-all;
 }
 
 .sentence-display:has(.final-sentence) {
   background-color: #FFFEF0;
-  border: 5px solid #CC9900; /* 테두리를 아주 두껍고 진하게 변경 */
-  box-shadow: 0 10px 25px rgba(204, 153, 0, 0.3); /* 그림자를 강하게 주어 튀어나와 보이게 함 */
+  border: 5px solid #d4a842; /* 테두리를 아주 두껍고 진하게 변경 */
+  box-shadow: 0 10px 25px rgba(212, 168, 66, 0.3); /* 그림자를 강하게 주어 튀어나와 보이게 함 */
   transform: scale(1.02); /* 상자 크기를 살짝 키워 시각적 긴장감 부여 */
 }
 /* --- 완성문장 강조 디자인 끝 --- */
@@ -292,7 +292,7 @@ header:after {
 
 #placed-cards {
   background-color: white !important;
-  border: 2px dotted #FFF500;
+  border: 2px dotted #f1c54b;
   opacity: 1 !important;
   position: relative;
   z-index: 2;
@@ -319,8 +319,8 @@ header:after {
   flex-direction: column;
   padding: 0.2rem 1.5rem;
   background-color: #FFFDF5; /* 연한 크림색 */
-  color: #CC9900;
-  border: 2px solid #FFF500;
+  color: #d4a842;
+  border: 2px solid #f1c54b;
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
@@ -331,7 +331,7 @@ header:after {
 .card:hover {
   background-color: #FFF5D6;
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(255, 245, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(241, 197, 75, 0.1);
 }
 
 .card:active {
@@ -377,8 +377,8 @@ header:after {
   padding: 1rem 2rem;
   margin-top: 1rem;
   background-color: #FFFEF0;
-  color: #CC9900;
-  border: 2px solid #FFF500;
+  color: #d4a842;
+  border: 2px solid #f1c54b;
   border-radius: 10px;
   font-weight: 700;
   font-size: 1.2rem;
@@ -401,8 +401,8 @@ header:after {
 button {
   padding: 0.2rem 2rem;
   background-color: #FFFEF0;
-  color: #CC9900;
-  border: 2px solid #FFF500;
+  color: #d4a842;
+  border: 2px solid #f1c54b;
   border-radius: 10px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -411,7 +411,7 @@ button {
 }
 
 button:hover {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: white;
 }
 
@@ -420,13 +420,13 @@ button:active {
 }
 
 #start-game {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: #333;
   font-size: 1.2rem;
 }
 
 #check-button {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: #333;
   height: 44px;
   display: flex;
@@ -437,7 +437,7 @@ button:active {
 }
 
 #check-button:hover {
-  background-color: #CC9900;
+  background-color: #d4a842;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -450,13 +450,13 @@ button:active {
   padding: 1.5rem;
   max-height: 50vh;
   overflow-y: auto;
-  border: 2px solid #FFF500;
+  border: 2px solid #f1c54b;
 }
 
 .review-item {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  border-bottom: 1px dashed #FFF500;
+  border-bottom: 1px dashed #f1c54b;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -471,10 +471,10 @@ button:active {
 .sentence-number {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #CC9900;
+  color: #d4a842;
   margin-bottom: 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #FFF500;
+  border-bottom: 2px solid #f1c54b;
 }
 
 .sentence-box {
@@ -482,7 +482,7 @@ button:active {
   padding: 0.8rem;
   background-color: #f8f9fa;
   border-radius: 8px;
-  border-left: 4px solid #FFF500;
+  border-left: 4px solid #f1c54b;
 }
 
 .sentence-box .chinese {
@@ -490,7 +490,7 @@ button:active {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
-  color: #CC9900;
+  color: #d4a842;
 }
 
 .sentence-box .pinyin {
@@ -542,7 +542,7 @@ button:active {
 }
 
 #start-game {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: #333;
   font-size: 1.2rem;
   padding: 1rem 2.5rem;
@@ -554,7 +554,7 @@ button:active {
 }
 
 #start-game:hover {
-  background-color: #CC9900;
+  background-color: #d4a842;
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -563,7 +563,7 @@ button:active {
 #day-selection h3 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #CC9900;
+  color: #d4a842;
   font-size: 1.5rem;
 }
 
@@ -593,19 +593,19 @@ button:active {
 
 #timeout-popup .popup-content {
   background-color: #fff9f0;
-  border: 3px solid #FFF500;
+  border: 3px solid #f1c54b;
   padding: 2rem;
   text-align: center;
   border-radius: 15px;
 }
 
 #timeout-popup h2 {
-  color: #CC9900;
+  color: #d4a842;
   font-size: 2rem;
 }
 
 #completed-day {
-  color: #CC9900;
+  color: #d4a842;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -614,36 +614,36 @@ button:active {
 .elapsed-time {
   text-align: center;
   font-size: 1.2rem;
-  color: #CC9900;
+  color: #d4a842;
   font-weight: 600;
   background-color: #FFFEF0;
   border-radius: 10px;
-  border: 2px solid #FFF500;
+  border: 2px solid #f1c54b;
 }
 
 .explanation-content h2 {
-  color: #CC9900;
+  color: #d4a842;
   font-size: 1.8rem;
 }
 
 .explanation-text {
   background-color: #FFFFF0;
   border-radius: 10px;
-  border: 2px dashed #FFF500;
+  border: 2px dashed #f1c54b;
 }
 
 .explanation-list li {
   background-color: #FFFEF0;
-  border-left: 4px solid #FFF500;
+  border-left: 4px solid #f1c54b;
 }
 
 #close-explanation {
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: white;
 }
 
 #close-explanation:hover {
-  background-color: #CC9900;
+  background-color: #d4a842;
 }
 
 #reset-button {
@@ -679,7 +679,7 @@ button:active {
   height: 100%;
 
   /* SVG를 활용한 무한 반복 배경 패턴 */
-  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-size='14' fill='rgba(255, 245, 0, 0.08)' font-family='Noto Sans KR' text-anchor='middle' transform='rotate(-25, 75, 75)'%3E진담중국어%3C/text%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-size='14' fill='rgba(241, 197, 75, 0.08)' font-family='Noto Sans KR' text-anchor='middle' transform='rotate(-25, 75, 75)'%3E진담중국어%3C/text%3E%3C/svg%3E");
 
   background-repeat: repeat; /* 패턴 무한 반복 */
   z-index: 0; /* 콘텐츠보다 뒤로 보냄 */
@@ -696,7 +696,7 @@ button:active {
 }
 
 #preview-title {
-  color: #CC9900;
+  color: #d4a842;
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 700;
@@ -705,7 +705,7 @@ button:active {
 /* 한국어 문장이 들어가는 상자 */
 .preview-box {
   background-color: #FFFFF0;
-  border: 2px dashed #FFF500;
+  border: 2px dashed #f1c54b;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -718,7 +718,7 @@ button:active {
 
 /* "중국어로 툭! 나오시나요?" 문구 */
 .preview-tagline {
-  color: #CC9900;
+  color: #d4a842;
   margin-bottom: 15px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -745,7 +745,7 @@ button:active {
 /* 훈련 시작 버튼 강조 */
 #close-preview.btn-primary {
   width: 100%;
-  background-color: #FFF500;
+  background-color: #f1c54b;
   color: #333;
   height: 55px;
   font-size: 1.2rem;
@@ -754,16 +754,16 @@ button:active {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 0 #CC9900; /* 입체감 버튼 */
+  box-shadow: 0 4px 0 #d4a842; /* 입체감 버튼 */
 }
 
 #close-preview.btn-primary:hover {
-  background-color: #CC9900;
+  background-color: #d4a842;
 }
 
 #close-preview.btn-primary:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #CC9900;
+  box-shadow: 0 2px 0 #d4a842;
 }
 
 /* 모바일 대응 */
